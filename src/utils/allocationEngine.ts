@@ -165,7 +165,7 @@ export const allocateDiscounts = (input: DiscountInput): DiscountOutput => {
   // Initial allocation based on scores
  const  allocations: AgentAllocation[] = agentScores.map(({ agent, score }) => {
     // Calculate raw allocation based on score proportion
-    const rawAllocation = (score / totalScore) * siteKitty;
+    let rawAllocation = (score / totalScore) * siteKitty;
     
     // Apply min/max constraints if provided
     if (config.minPerAgent !== undefined) {
