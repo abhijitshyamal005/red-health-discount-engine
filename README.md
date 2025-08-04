@@ -1,5 +1,8 @@
 Web Checkout: https://red-health-discount-engine-2y9u.vercel.app/
 
+![Sample output](public/img1.png)
+![Sample outpot](public/img2.png)
+
 # Smart Discount Allocation Engine
 
 A Next.js application that fairly distributes a discount kitty among sales agents based on their performance metrics. This tool provides a data-driven and justifiable approach to allocating discounts, ensuring fairness and transparency.
