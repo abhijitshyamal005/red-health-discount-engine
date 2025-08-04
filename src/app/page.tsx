@@ -40,11 +40,14 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-red-health-50">
+      {/* Top bar for branding or notification */}
+      <div className="w-full bg-red-health-50 text-white text-xs py-1 text-center tracking-wide">
+        Empowering Sales Teams with Smart Discount Allocation
+      </div>
       <header className="bg-white shadow-md">
         <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <img src="/red-health-logo.svg" alt="Red Health Logo" className="h-10 w-10" />
-            <span className="text-xl font-bold text-red-health-600">Red Health</span>
+            <img src="/logo.webp" alt="Red Health Logo" className="h-15 w-50" />
           </div>
         </div>
       </header>
