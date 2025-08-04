@@ -1,3 +1,5 @@
+Web Checkout: 
+
 # Smart Discount Allocation Engine
 
 A Next.js application that fairly distributes a discount kitty among sales agents based on their performance metrics. This tool provides a data-driven and justifiable approach to allocating discounts, ensuring fairness and transparency.
