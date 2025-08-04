@@ -39,22 +39,50 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-red-health-50">
-      {/* Top bar for branding or notification */}
-      <div className="w-full bg-red-health-50 text-white text-xs py-1 text-center tracking-wide">
-        Empowering Sales Teams with Smart Discount Allocation
+    <main className="min-h-screen bg-white">
+      {/* Top bar for navigation */}
+      <div className="w-full bg-gray-100 text-black text-xs py-2 tracking-wide flex justify-end pr-8">
+        <ul className="flex space-x-6">
+          {['OUR PRESENCE', 'NEWS', 'CAREERS', 'CONTACT US', 'BLOG'].map((item) => (
+            <li key={item}>
+              <a
+                href="#"
+                className="hover:underline hover:underline-offset-4 hover:decoration-red-500 transition-colors duration-200"
+              >
+                {item}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
-      <header className="bg-white shadow-md">
+      <header className="bg-white">
         <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <img src="/logo.webp" alt="Red Health Logo" className="h-15 w-50" />
           </div>
+          <ul className="flex space-x-6 items-center">
+            {['ABOUT US', 'SOLUTIONS', 'PRODUCTS', 'FARE ESTIMATOR', 'BOOK AN AMBULANCE'].map((item, idx, arr) => (
+              <li key={item}>
+                <a
+                  href="#"
+                  className={
+                    `text-base md:text-lg font-sans transition-colors duration-200 ` +
+                    (idx === arr.length - 1
+                      ? 'border border-red-500 rounded-3xl px-4 py-2 hover:bg-red-500 hover:text-white hover:no-underline'
+                      : 'hover:underline hover:underline-offset-4 hover:decoration-red-500')
+                  }
+                >
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </header>
       
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-3xl font-extrabold text-red-health-800 sm:text-4xl">
+          <h1 className="text-3xl font-extrabold text-gray-800 sm:text-4xl">
             Smart Discount Allocation Engine
           </h1>
           <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-600 sm:mt-4">
@@ -63,37 +91,38 @@ export default function Home() {
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden p-6 border border-red-health-100">
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden p-6 border border-red-health-300">
             <AllocationForm onSubmit={handleSubmit} isLoading={isLoading} />
           </div>
-
+      
           <div>
             {error && (
-              <div className="rounded-md bg-red-health-50 p-4 mb-6 border border-red-health-200">
+              <div className="rounded-md bg-white p-4 mb-6 border border-red-500">
                 <div className="flex">
                   <div className="ml-3">
-                    <h3 className="text-sm font-medium text-red-health-800">Error</h3>
-                    <div className="mt-2 text-sm text-red-health-700">
+                    <h3 className="text-sm font-medium text-red-500">Error</h3>
+                    <div className="mt-2 text-sm text-red-500">
                       <p>{error}</p>
                     </div>
                   </div>
                 </div>
               </div>
             )}
-
+      
             {results && <AllocationResults results={results} />}
           </div>
         </div>
       </div>
       
-      <footer className="bg-red-health-800 text-white py-6 mt-12">
+      <footer className="bg-gray-100 text-white py-6 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <img src="/red-health-logo.svg" alt="Red Health Logo" className="h-8 w-8 filter brightness-0 invert" />
-              <span className="font-semibold">Red Health</span>
+            <div className="flex items-center space-x-3">
+            <img src="/logo.webp" alt="Red Health Logo" className="h-15 w-50" />
+          </div>
             </div>
-            <p className="text-sm text-red-health-100">© {new Date().getFullYear()} Red Health. All rights reserved.</p>
+            <p className="text-sm text-black">© {new Date().getFullYear()} Red Health. All rights reserved.</p>
           </div>
         </div>
       </footer>

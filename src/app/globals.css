@@ -3,9 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --red-health-primary: #E53E3E;
-  --red-health-light: #FEF2F2;
-  --red-health-dark: #991B1B;
+  --red-health-primary: #FF0000;
+  --red-health-light: #FFFFFF;
+  --red-health-dark: #CC0000;
 }
 
 @theme inline {
@@ -17,8 +17,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #171717;
   }
 }
 

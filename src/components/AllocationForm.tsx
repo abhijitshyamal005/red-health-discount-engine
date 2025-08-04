@@ -100,7 +100,7 @@ export default function AllocationForm({ onSubmit, isLoading }: AllocationFormPr
           <button
             type="button"
             onClick={addAgent}
-            className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md shadow-sm text-white bg-red-health-600 hover:bg-red-health-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-health-500"
+            className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-health-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
           >
             Add Agent
           </button>
@@ -132,7 +132,7 @@ export default function AllocationForm({ onSubmit, isLoading }: AllocationFormPr
                   value={agent.id}
                   onChange={(e) => handleAgentChange(index, 'id', e.target.value)}
                   required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-health-500 focus:ring-red-health-500 sm:text-sm"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 sm:text-sm"
                 />
               </div>
 
@@ -148,7 +148,7 @@ export default function AllocationForm({ onSubmit, isLoading }: AllocationFormPr
                   min="0"
                   max="100"
                   required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-health-500 focus:ring-red-health-500 sm:text-sm"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 sm:text-sm"
                 />
               </div>
 
@@ -163,7 +163,7 @@ export default function AllocationForm({ onSubmit, isLoading }: AllocationFormPr
                   onChange={(e) => handleAgentChange(index, 'seniorityMonths', Number(e.target.value))}
                   min="0"
                   required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-health-500 focus:ring-red-health-500 sm:text-sm"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 sm:text-sm"
                 />
               </div>
 
@@ -179,7 +179,7 @@ export default function AllocationForm({ onSubmit, isLoading }: AllocationFormPr
                   min="0"
                   max="100"
                   required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-health-500 focus:ring-red-health-500 sm:text-sm"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 sm:text-sm"
                 />
               </div>
 
@@ -194,7 +194,7 @@ export default function AllocationForm({ onSubmit, isLoading }: AllocationFormPr
                   onChange={(e) => handleAgentChange(index, 'activeClients', Number(e.target.value))}
                   min="0"
                   required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-health-500 focus:ring-red-health-500 sm:text-sm"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 sm:text-sm"
                 />
               </div>
             </div>
@@ -226,7 +226,7 @@ export default function AllocationForm({ onSubmit, isLoading }: AllocationFormPr
                   value={minPerAgent || ''}
                   onChange={(e) => setMinPerAgent(e.target.value ? Number(e.target.value) : undefined)}
                   min="0"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-health-500 focus:ring-red-health-500 sm:text-sm"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 sm:text-sm"
                 />
               </div>
 
@@ -240,7 +240,7 @@ export default function AllocationForm({ onSubmit, isLoading }: AllocationFormPr
                   value={maxPerAgent || ''}
                   onChange={(e) => setMaxPerAgent(e.target.value ? Number(e.target.value) : undefined)}
                   min="0"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-health-500 focus:ring-red-health-500 sm:text-sm"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 sm:text-sm"
                 />
               </div>
             </div>
@@ -262,7 +262,7 @@ export default function AllocationForm({ onSubmit, isLoading }: AllocationFormPr
                     step="0.05"
                     min="0"
                     max="1"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-health-500 focus:ring-red-health-500 sm:text-sm"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 sm:text-sm"
                   />
                 </div>
 
@@ -278,7 +278,7 @@ export default function AllocationForm({ onSubmit, isLoading }: AllocationFormPr
                     step="0.05"
                     min="0"
                     max="1"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-health-500 focus:ring-red-health-500 sm:text-sm"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 sm:text-sm"
                   />
                 </div>
 
@@ -294,7 +294,7 @@ export default function AllocationForm({ onSubmit, isLoading }: AllocationFormPr
                     step="0.05"
                     min="0"
                     max="1"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-health-500 focus:ring-red-health-500 sm:text-sm"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 sm:text-sm"
                   />
                 </div>
 
@@ -310,7 +310,7 @@ export default function AllocationForm({ onSubmit, isLoading }: AllocationFormPr
                     step="0.05"
                     min="0"
                     max="1"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-health-500 focus:ring-red-health-500 sm:text-sm"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 sm:text-sm"
                   />
                 </div>
               </div>
@@ -330,7 +330,7 @@ export default function AllocationForm({ onSubmit, isLoading }: AllocationFormPr
         <button
           type="submit"
           disabled={isLoading}
-          className="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-health-600 hover:bg-red-health-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-health-500 disabled:bg-red-health-300"
+          className="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 disabled:bg-red-health-300"
         >
           {isLoading ? 'Calculating...' : 'Calculate Allocation'}
         </button>
