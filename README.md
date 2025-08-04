@@ -146,14 +146,3 @@ npm test
 yarn test
 ```
 
-## Future Enhancements
-
-- Support for additional metrics
-- Historical allocation tracking
-- Visualization of allocation distribution
-- Export to CSV/Excel
-- User authentication and role-based access
-
-## License
-
-MIT
