@@ -1,10 +1,19 @@
 'use client';
 
-import { DiscountOutput } from '@/types';
+import { DiscountOutput, DiscountSituation } from '@/types';
 
 interface AllocationResultsProps {
   results: DiscountOutput | null;
 }
+
+// Situation descriptions for display
+const SITUATION_DESCRIPTIONS = {
+  standard: 'Regular discount allocation based on agent performance metrics',
+  seasonal: 'Special seasonal promotions with higher emphasis on recent performance',
+  newProduct: 'New product launch with focus on experienced agents',
+  competitiveResponse: 'Response to competitor actions with emphasis on target achievement',
+  customerRetention: 'Focus on retaining existing customers with emphasis on active clients',
+};
 
 export default function AllocationResults({ results }: AllocationResultsProps) {
   if (!results) return null;
@@ -16,6 +25,14 @@ export default function AllocationResults({ results }: AllocationResultsProps) {
       <div className="overflow-hidden bg-white shadow-lg rounded-lg border border-red-health-300">
         <div className="px-4 py-5 sm:px-6 bg-white">
           <h3 className="text-lg font-medium leading-6 text-red-500">Summary</h3>
+          {results.situation && (
+            <p className="mt-1 max-w-2xl text-sm text-gray-600">
+              Situation: <span className="font-medium text-red-500">
+                {results.situation.charAt(0).toUpperCase() + results.situation.slice(1)}
+              </span>
+              <span className="block text-xs mt-1">{SITUATION_DESCRIPTIONS[results.situation]}</span>
+            </p>
+          )}
           <p className="mt-1 max-w-2xl text-sm text-gray-600">
             Total allocated: <span className="font-medium text-red-500">₹{results.summary?.totalAllocated.toLocaleString()}</span>
           </p>
