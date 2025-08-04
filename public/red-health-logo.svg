@@ -1,0 +1,11 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Red cross symbol -->
+  <rect x="80" y="40" width="40" height="120" rx="5" fill="#E53E3E" />
+  <rect x="40" y="80" width="120" height="40" rx="5" fill="#E53E3E" />
+  
+  <!-- Circular background -->
+  <circle cx="100" cy="100" r="80" stroke="#E53E3E" stroke-width="8" fill="none" />
+  
+  <!-- Text -->
+  <text x="100" y="180" font-family="Arial" font-size="16" font-weight="bold" fill="#E53E3E" text-anchor="middle">RED HEALTH</text>
+</svg>
