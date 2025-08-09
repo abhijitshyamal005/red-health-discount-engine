@@ -124,7 +124,7 @@ export default function Home() {
             </div>
             <p className="text-sm text-black">© {new Date().getFullYear()} Red Health. All rights reserved.</p>
           </div>
-          <P>Write BY Abhijit Shyamal , 2023PGCSCA003</P>
+          <h3>Write BY Abhijit Shyamal , 2023PGCSCA003</h3>
         </div>
       </footer>
     </main>
